@@ -55,6 +55,11 @@ def Response():
     return render_template('Response.html', data=[{'output': output(select)[0], 'input': select, 'count': output(select)[2]}])
 
 
+@app.route('/data')
+def get_table():
+    return render_template('data.html', tables=[df.to_html(classes='data')], titles=df.columns.values)
+
+
 with open('info.csv', 'r') as f:
     source = f.readlines()
 
