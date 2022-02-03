@@ -103,10 +103,8 @@ df.columns = [
     "category10",
 ]
 df["amount_of_shows"] = df["amount_of_shows"].astype(int)
-print(df)
 
 req = list(set(df.iloc[:, 2:].values.flatten()))
-print(req)
 log_ind = []
 
 
