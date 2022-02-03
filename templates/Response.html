@@ -1,0 +1,11 @@
+{% for o in data %}
+<h1>You choose:<br>{{o.input}}</h1>
+{% endfor %}
+
+{% for o in data %}
+<image src={{o.output}}>
+{% endfor %}
+
+{% for o in data %}
+<h1>Count of this picture: {{o.count}}</h1>
+{% endfor %}

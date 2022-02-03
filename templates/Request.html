@@ -1,0 +1,79 @@
+<form class="form-inline" method="POST" action="{{ url_for('Response') }}">
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">Please select categories:</span>
+            <br>
+            <select name="comp_select1" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select name="comp_select2" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select name="comp_select3" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select name="comp_select4" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select name="comp_select5" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select name="comp_select6" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select name="comp_select7" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select name="comp_select8" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select name="comp_select9" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select name="comp_select10" class="selectpicker form-control">
+                <option disabled selected value> -- select category -- </option>
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+        </div>
+    <button type="submit" class="btn btn-default">Search</button>
+  </div>
+</form>
