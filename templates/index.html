@@ -1,0 +1,19 @@
+<head>
+<title>Сontent viewing service</title>
+</head>
+
+<body>
+    {% for o in data %}
+    <h1> Categories: {{o.category}} </h1>
+    {% endfor %}
+
+    {% for o in data %}
+    <image src={{o.path}}></image>>
+    {% endfor %}
+
+    {% for o in data %}
+    <h1>Credits: {{o.count}}</h1>
+    {% endfor %}
+</body>
+
+</html>

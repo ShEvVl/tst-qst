@@ -6,11 +6,36 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-@app.route("/", defaults={'input': []})
-def main(input):
-    input = request.args.getlist('category[]')
+@app.route("/")
+@app.route("/request")
+def Request():
     return render_template(
-        "index.html", data=[{'category': input, 'path': output(input)[0], 'count': output(input)[2]}]
+        "Request.html",
+        data=[{'name': x} for x in req]
+    )
+
+
+@app.route("/response", methods=["GET", "POST"])
+def Response():
+    select_all = [request.form.get(f"comp_select{x}") for x in range(1, 11)]
+    select = []
+    for i in select_all:
+        if i != None:
+            select.append(i)
+        else:
+            pass
+    return render_template(
+        "Response.html",
+        data=[
+            {"output": output(select)[0], "input": select, "count": output(select)[2]}
+        ],
+    )
+
+
+@app.route("/data")
+def get_table():
+    return render_template(
+        "Data.html", tables=[df.to_html(classes="data")], titles=df.columns.values
     )
 
 
