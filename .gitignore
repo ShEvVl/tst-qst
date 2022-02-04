@@ -1,5 +1,5 @@
 static/*
 !static/.gitkeep
 info.csv
-.idea
-__pycache__
+.idea/*
+__pycache__/*
