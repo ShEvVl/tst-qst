@@ -1,17 +1,19 @@
 import random
 import pandas as pd
 
-
+# read csv file
 with open("info.csv", "r") as f:
-    source = f.readlines()
+    lines = f.readlines()
 
 data = []
-for i in range(len(source)):
-    data.append(source[i].replace("\n", ""))
+# formatting data to build pd.table
+for i in range(len(lines)):
+    data.append(lines[i].replace("\n", ""))
 df = pd.Series(data).str.split(pat=";", expand=True)
 df.columns = ["url", "amount_of_shows"]+[f"category{x}" for x in range(1, 11)]
 df["amount_of_shows"] = df["amount_of_shows"].astype(int)
 
+# pick up all available labels of categories
 req = list(set(df.iloc[:, 2:].values.flatten()))
 log_ind = []
 
