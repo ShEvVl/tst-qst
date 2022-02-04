@@ -20,7 +20,7 @@ def output(r):
     seq = []
     if r == []:
         top_seq_path = df.iloc[random.randint(0, len(df) - 1), 0]
-        ind_top = df.index[df["Path"] == top_seq_path].tolist()
+        ind_top = df.index[df["url"] == top_seq_path].tolist()
         log_ind.append(ind_top[0])
     else:
         for i in range(len(r)):
@@ -33,7 +33,7 @@ def output(r):
         seq_u = list(set([item for sublist in seq for item in sublist]))
         df_t = df.iloc[seq_u].sort_values(by=["amount_of_shows"], ascending=False)
         top_seq_path = df_t.iloc[0, 0]
-        ind_top = df.index[df["Path"] == top_seq_path].tolist()
+        ind_top = df.index[df["url"] == top_seq_path].tolist()
         if log_ind == []:
             pass
         else:
