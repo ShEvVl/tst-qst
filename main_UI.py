@@ -28,7 +28,7 @@ def Response():
         "Response.html",
         data=[
             {"output": output(select)[0], "input": select, "count": output(select)[2]}
-        ],
+        ]
     )
 
 
