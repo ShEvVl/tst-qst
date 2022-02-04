@@ -10,7 +10,7 @@ app = Flask(__name__)
 def main(input):
     input = request.args.getlist('category[]')
     return render_template(
-        "index.html", data=[{'category': input, 'path': output(input)[0], 'count': output(input)[2]}]
+        "index.html", data=[{'category': input, 'path': output(input)[0], 'count': output(input)[2], 'all_cats': req}]
     )
 
 
