@@ -1,23 +1,9 @@
 <head>
-<title>Сontent viewing service</title>
+<title>content viewing service</title>
 </head>
 
 <body>
-    {% for o in data %}
-    <h1> Categories: {{o.category}} </h1>
-    {% endfor %}
 
-    {% for o in data %}
-    <image src={{o.path}}></image>>
-    {% endfor %}
+    <image src={{data}} style="border-radius: 7px; display: block; margin-left: auto; margin-right: auto"></image>>
 
-    {% for o in data %}
-    <h1>Credits: {{o.count}}</h1>
-    {% endfor %}
-
-    {% for o in data %}
-    <h1> All available categories: <br>{{o.all_cats}} </h1>
-    {% endfor %}
 </body>
-
-</html>
