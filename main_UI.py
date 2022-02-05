@@ -8,14 +8,21 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/request")
 def get_request():
-    return render_template(
-        "request.html",
-        data=[{'name': x} for x in req]
-    )
+    """Request page
+
+    Returns:
+        request.html: page with form to get categories
+    """
+    return render_template("request.html", data=[{"name": x} for x in req])
 
 
 @app.route("/response", methods=["GET", "POST"])
 def get_response():
+    """Response page
+
+    Returns:
+        response.html: page with following configurations about categories
+    """
     select_all = [request.form.get(f"comp_select{x}") for x in range(1, 11)]
     select = []
     for i in select_all:
@@ -27,12 +34,17 @@ def get_response():
         "response.html",
         data=[
             {"output": output(select)[0], "input": select, "count": output(select)[2]}
-        ]
+        ],
     )
 
 
 @app.route("/data")
 def get_table():
+    """Data table page
+
+    Returns:
+        data.html: page with data table
+    """
     return render_template(
         "data.html", tables=[df.to_html(classes="data")], titles=df.columns.values
     )

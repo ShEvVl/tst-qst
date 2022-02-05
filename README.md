@@ -25,7 +25,7 @@ http://localhost:8080/?category[]=city&category[]=apple
 
 Запуск сервера с пользовательским интерфейсом:
 ```shell
-python main_UI.py 
+python main_ui.py 
 ```
 адресс сервера `http://localhost:8080`
 
