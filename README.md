@@ -3,17 +3,14 @@
 Задача описана в `test_specs.docx`
 
 ## Для запуска выполнить:
+
+- загрузить необходимые библиотеки;
+- сгенерировать csv файл и изображения;
+- запустить сервер.
+
 ```shell
-Загрузить необходимые библиотеки:
-
     pip install -r requirements.txt
-
-Сгенерировать csv файл и изображения:
-
-    img_info_generator.py
-
-Запустить сервер:
-
+    python img_info_generator.py
     python main.py 
 ```
 
